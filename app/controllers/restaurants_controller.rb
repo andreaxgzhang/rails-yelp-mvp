@@ -21,6 +21,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    @reviews = Review.where(restaurant_id: params[:id])
   end
 
   private
